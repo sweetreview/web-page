@@ -2,6 +2,53 @@
 <html lang="en">
 
 <head>
+            <style type="text/css">
+            
+            * {
+                margin:0px;
+                padding:0px;
+            }     
+            
+            ul, ol {
+                list-style:none;
+            }
+            
+            .nav > li {
+                float:left;
+            }
+            
+            .nav li a {
+                background-color:#000;
+                color:#fff;
+                text-decoration:none;
+                padding:10px 12px;
+                display:block;
+            }
+            
+            .nav li a:hover {
+                background-color:#434343;
+            }
+            
+            .nav li ul {
+                display:none;
+                position:absolute;
+                min-width:140px;
+            }
+            
+            .nav li:hover > ul {
+                display:block;
+            }
+            
+            .nav li ul li {
+                position:relative;
+            }
+            
+            .nav li ul li ul {
+                right:-140px;
+                top:0px;
+            }
+            
+        </style>
     <script data-ad-client="ca-pub-5205429129190743" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -54,7 +101,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#header" class="page-scroll">Inicio</a></li>
-                    <li><a href="#categorias" class="page-scroll">Categorias</a></li>
+                    <li><a href="#categorias" class="page-scroll">Categorias</a>
+                        <ul style="background-color: #000">
+                            <h4>
+                            <li><a href="#">Ordenadores</a></li>
+                            <li><a href="#">Moviles</a></li>
+                            <li><a href="#">Componentes</a></li>
+                            <li><a href="#">Otros</a></li>
+                            </h4>
+                        </ul>
+                    </li>
                     <li><a href="#portfolio" class="page-scroll">Articulos</a></li>
                     <li><a href="#contact" class="page-scroll">Contacto</a></li>
                 </ul>
@@ -93,7 +149,7 @@
                     <p>¿Quieres un buen movil a bajo precio? Esta es tu categoría</p>
                 </div>
                 <div class="col-xs-6 col-md-3"> <i class="fa fa-hdd-o"></i>
-                    <h3>Componentes PC</h3>
+                    <h3>Componentes</h3>
                     <p>En esta categoría comparamos los componentes actuales para que montar un PC no te cueste demasiado</p>
                 </div>
                 <div class="col-xs-6 col-md-3"> <i class="fa three-points"></i>
