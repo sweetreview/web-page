@@ -15,4 +15,4 @@ function readTextFile(file)
     }
     rawFile.send(null);
 }
-console.log(readTextFile(""));
+document.write("https://raw.githubusercontent.com/Ujik42/sweetreview/gh-pages/html/bot.html");
