@@ -15,7 +15,7 @@ function includeHTML1() {
           if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
           /* Remove the attribute, and call this function once more: */
           elmnt.removeAttribute("include-html1");
-          includeHTML();
+          includeHTML1();
         }
       }
       xhttp.open("GET", file, true);
@@ -42,7 +42,7 @@ function includeHTML2() {
           if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
           /* Remove the attribute, and call this function once more: */
           elmnt.removeAttribute("include-html2");
-          includeHTML();
+          includeHTML2();
         }
       }
       xhttp.open("GET", file, true);
