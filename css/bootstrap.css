@@ -6756,4 +6756,13 @@ button.close {
     display: none !important;
   }
 }
+.form_input
+{
+  font-family: sans-serif;
+  font-size: 12;
+  color: #ffffff;
+  border-width: 0;
+  background-color: #000077;
+  text-align: right;
+}
 /*# sourceMappingURL=bootstrap.css.map */
