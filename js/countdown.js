@@ -9,17 +9,17 @@
 //variables que determinan la fecha y hora final de la cuenta atras
 
 
-toYear=2021;
+toYear=2020;
 
-toMonth=12;
+toMonth=2;
 
-toDay=31;
+toDay=16;
 
-toHour=23;
+toHour=12;
 
-toMinute=59;
+toMinute=0;
 
-toSecond=59;
+toSecond=0;
 
  
 

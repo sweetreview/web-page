@@ -40,7 +40,17 @@
     <![endif]-->
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="countDown();">
+    <div>
+        <form name="form">
+            Tiempo para la apertura<br><br>
+            <input type="text" size="5" class="form_input" name="day" disabled> dias<br>
+            <input type="text" size="5" class="form_input" name="hour" disabled> horas<br>
+            <input type="text" size="5" class="form_input" name="minute" disabled> minutos<br>
+            <input type="text" size="5" class="form_input" name="second" disabled> segundos<br>
+
+        </form>
+    </div>
     <!-- Navigation
     ==========================================-->
     <nav id="menu" class="navbar navbar-default navbar-fixed-top">
