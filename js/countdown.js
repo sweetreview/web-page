@@ -109,7 +109,9 @@ function countDown()
 
 		form.hour.value=new_hour;
 
- 		new_day=new_day+toDay-actual_date.getDate();
+ 
+
+		new_day=new_day+toDay-actual_date.getDate();
 
 		if(new_day<0)
 

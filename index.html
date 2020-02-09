@@ -5,8 +5,19 @@
     <script type="text/javascript" src="js/includeHTML.js"></script>
     <script type="text/javascript" src="js/countdown.js"></script> 
 </head>
-<body>
+<body onload="countDown();">
     <div include-html1="https://raw.githubusercontent.com/Ujik42/sweetreview/gh-pages/html/top.html"></div> 
+            <div>
+                <form name="form" >
+                    Tiempo para la apertura:&nbsp;
+                    <input type="text" size="5" class="form_input" name="year" disabled> años&nbsp;
+                    <input type="text" size="5" class="form_input" name="month" disabled> meses&nbsp;
+                    <input type="text" size="5" class="form_input" name="day" disabled> dias&nbsp;
+                    <input type="text" size="5" class="form_input" name="hour" disabled> horas&nbsp;
+                    <input type="text" size="5" class="form_input" name="minute" disabled> minutos&nbsp;
+                    <input type="text" size="5" class="form_input" name="second" disabled> segundos&nbsp;
+                </form>
+            </div>
 <!-- Header -->
     <header id="header">
         <div class="intro">
