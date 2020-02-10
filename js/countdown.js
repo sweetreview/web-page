@@ -1,190 +1,28 @@
-//Codigo que muestra la cuenta atras hasta el final del año 2010
-
-//La Web del Programador
-
-//http://www.lawebdelprogramador.com
-
- 
-
-//variables que determinan la fecha y hora final de la cuenta atras
-
-
-toYear=2020;
-
-toMonth=2;
-
-toDay=16;
-
-toHour=12;
-
-toMinute=0;
-
-toSecond=0;
-
- 
-
-function countDown()
-
-{
-
-	new_year=0;
-
-	new_month=0;
-
-	new_day=0;
-
-	new_hour=0;
-
-	new_minute=0;
-
-	new_second=0;
-
-	actual_date=new Date();
-
- 
-
-	if(actual_date.getFullYear()>toYear)
-
-	{
-
-		//si ya nos hemos pasado del año, mostramos los valores a 0
-
-		form.second.value=0;
-
-		form.minute.value=0;
-
-		form.hour.value=0;
-
-		form.day.value=0;
-
-		form.month.value=0;
-
-		form.year.value=0;
-
-	}else{
-
-		new_second=new_second+toSecond-actual_date.getSeconds();
-
-		if(new_second<0)
-
-		{
-
-			new_second=60+new_second;
-
-			new_minute=-1;
-
-		}
-
-		form.second.value=new_second;
-
- 
-
-		new_minute=new_minute+toMinute-actual_date.getMinutes();
-
-		if(new_minute<0)
-
-		{
-
-			new_minute=60+new_minute;
-
-			new_hour=-1;
-
-		}
-
-		form.minute.value=new_minute;
-
- 
-
-		new_hour=new_hour+toHour-actual_date.getHours();
-
-		if(new_hour<0)
-
-		{
-
-			new_hour=24+new_hour;
-
-			new_day=-1;
-
-		}
-
-		form.hour.value=new_hour;
-
- 
-
-		new_day=new_day+toDay-actual_date.getDate();
-
-		if(new_day<0)
-
-		{
-
-			x=actual_date.getMonth();
-
-			if(x==0||x==2||x==4||x==6||x==7||x==9||x==11){new_day=31+new_day;}
-
-			if(x==3||x==5||x==8||x==10){new_day=30+new_day;}
-
-			if(x==1)
-
-			{
-
-				//comprobamos si es un año bisiesto...
-
-				if(actual_date.getYear()/4-Math.floor(actual_date.getYear()/4)==0)
-
-				{
-
-					actual_date=29+actual_date;
-
-				}else{
-
-					actual_date=28+actual_date;
-
-				}
-
-			}
-
-		}
-
-		form.day.value=new_day;
-
- 
-
-		new_month=-1;
-
-		new_month=new_month+toMonth-actual_date.getMonth();
-
-		if(new_month<0)
-
-		{
-
-			new_month=11+new_month;
-
-			new_year=-1;
-
-		}
-
-		form.month.value=new_month;
-
- 
-
-		new_year=new_year+toYear-actual_date.getFullYear();
-
-		if(new_year<0)
-
-		{
-
-			form.year.value=0;
-
-		}else{
-
-			form.year.value=new_year;
-
-			//vuelve a ejecutar la funcion dentro de 1000 milisegundos = 1 segundo
-
-			setTimeout("countDown()",1000);
-
-		}
-
-	}
-
-}
+// Set the date we're counting down to
+var countDownDate = new Date("Feb 23, 2020 10:10:10").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
