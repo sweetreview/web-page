@@ -4,9 +4,20 @@
     <title></title>
     <script type="text/javascript" src="js/includeHTML.js"></script>
     <script type="text/javascript" src="js/countdown.js"></script> 
+    <style type="text/css">
+        .form_input
+            {
+              font-size: 12;
+              color: #ffffff;
+              border-width: 0;
+              background-color: #00000000;
+              text-align: right;
+            }
+    </style>
 </head>
 <body onload="countDown();">
     <div include-html1="https://raw.githubusercontent.com/Ujik42/sweetreview/gh-pages/html/top.html"></div> 
+    <div include-html3="html/countdown.html"></div>
             <div>
                 <form name="form" >
                     Tiempo para la apertura:&nbsp;
@@ -172,5 +183,5 @@
     </div>
 
     <div include-html2="https://raw.githubusercontent.com/Ujik42/sweetreview/gh-pages/html/bot.html"></div>
-    <script>includeHTML1();includeHTML2();</script> 
+    <script>includeHTML1();includeHTML2();includeHTML3();</script> 
 </body>

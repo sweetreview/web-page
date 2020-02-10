@@ -6756,12 +6756,5 @@ button.close {
     display: none !important;
   }
 }
-.form_input
-{
-  font-size: 12;
-  color: #ffffff;
-  border-width: 0;
-  background-color: #00000000;
-  text-align: right;
-}
+
 /*# sourceMappingURL=bootstrap.css.map */
